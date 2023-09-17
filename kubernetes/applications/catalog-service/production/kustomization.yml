@@ -17,10 +17,13 @@ configMapGenerator:
   name: catalog-config
 
 images:
+- name: catalog-service
+  newName: ghcr.io/shaffmiester734/catalog-service
+  newTag: a74bc12901a442f30043201b6b736cd2956c92cd
 - name: catolog-service
   newName: ghcr.io/shaffmiester734/catalog-service
   newTag: 5418abe6bcd18b57479a5ca179efc68c19befd01
 
 replicas:
-  - name: catalog-service
-    count: 2
+- count: 2
+  name: catalog-service
